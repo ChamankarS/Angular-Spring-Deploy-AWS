@@ -3,14 +3,16 @@ provider "aws" {
   profile = "default"
 }
 
-# resource "aws_iam_user" "lb" {
-#   name = "user1"
+#User Creation
+
+resource "aws_iam_user" "lb" {
+  name = "user1"
    
 
-#   tags = {
-#     tag-key = "Paul"
-#   }
-# }
+  tags = {
+    tag-key = "Paul"
+  }
+}
 
 # VPC Creation
 resource "aws_vpc" "main" {
