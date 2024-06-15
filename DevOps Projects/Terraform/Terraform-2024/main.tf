@@ -3,6 +3,16 @@ provider "aws" {
   profile = "default"
 }
 
+
+# Modules
+module "Web-Server-1" {
+  source = ".//Tf_Module-1"
+}
+
+module "Web-Server-2" {
+  source = ".//Tf_Module-2"
+}
+
 #User Creation
 
 resource "aws_iam_user" "lb" {
